@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BIOELECTRICITY DATA ENTRY| Spirulina Bioelectricity Data Entry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-image: url('EL5.jpeg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 0;
+      min-height: 100vh;
+      
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cover-container {
+      background: rgba(13, 54, 29, 0.92); 
+      background-size: cover; /* Ensures the image covers the entire area */
+      background-repeat: no-repeat; /* Prevents the image from repeating */
+      background-position: center; /* Centers the image */
+      border-radius: 32px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      max-width: 900px;
+      width: 96vw;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 0;
+    }
+    .left {
+      flex: 1 1 350px;
+      padding: 60px 40px 60px 60px;
+      min-width: 320px;
+    }
+    .right {
+      flex: 1 1 320px;
+      background: transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 30px;
+      min-width: 320px;
+    }
+    .cover-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.6em;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 0.2em;
+      letter-spacing: 1.5px;
+    }
+    .cover-sub {
+      color: #aaa;
+      font-size: 1.15em;
+      margin-bottom: 2.2em;
+    }
+    .notfound {
+      font-size: 1.6em;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      background: linear-gradient(90deg, #fff 50%, #222 50%);
+      color: #181818;
+      padding: 0.6em 1.8em;
+      border-radius: 1em;
+      display: inline-block;
+      margin-bottom: 1.5em;
+      letter-spacing: 2px;
+    }
+    .form-title {
+      font-family: 'Space Grotesk', sans-serif;
+      color: #f5f8f6;
+      font-size: 1.6em;
+      margin-bottom: 0.7em;
+      letter-spacing: 1px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+    label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 7px;
+      color: #e0f7fa;
+      font-size: 1.07rem;
+      letter-spacing: 0.5px;
+    }
+    input, select {
+      width: 100%;
+      padding: 13px 12px;
+      border-radius: 8px;
+      border: 2px solid #719b7b;
+      font-size: 1.05rem;
+      background: #222;
+      color: #fff;
+      transition: border 0.3s, background 0.3s;
+      outline: none;
+      box-sizing: border-box;
+    }
+    input:focus, select:focus {
+      border: 2.5px solid #fff;
+      background: #64b789;
+      color: #181818;
+    }
+    .optional {
+      font-weight: normal;
+      color: #aaa;
+      font-size: 0.95em;
+      margin-left: 6px;
+    }
+    .submit-btn {
+      width: 100%;
+      padding: 15px 0;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #87c4a1 0%, #f2fcfe 100%);
+      color: #181818;
+      font-size: 1.18rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px 0 rgba(28,146,210,0.18);
+      transition: background 0.4s, color 0.4s;
+      margin-top: 10px;
+    }
+    .submit-btn:hover {
+      background: linear-gradient(90deg, #0f2027 0%, #43c18f 100%);
+      color: #fff;
+    }
+    .output {
+      margin-top: 28px;
+      padding: 18px;
+      background: #5bb6a1;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      color: #181818;
+      box-shadow: 0 2px 8px #1c92d2aa;
+      animation: fadeIn 0.8s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .go-home {
+      margin-top: 30px;
+      display: block;
+      width: 100%;
+      background: #222;
+      color: #c1c4c6;
+      border: 1.5px solid #63b087;
+      padding: 12px 0;
+      border-radius: 8px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.1em;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      text-align: center;
+      text-decoration: none;
+    }
+    .go-home:hover {
+      background: #1c92d2;
+      color: #181818;
+    }
+    @media (max-width: 900px) {
+      .cover-container { flex-direction: column; }
+      .left, .right { padding: 40px 20px; }
+    }
+    @media (max-width: 600px) {
+      .cover-title { font-size: 1.3em; }
+      .form-title { font-size: 1.1em; }
+      .notfound { font-size: 1em; }
+      .left, .right { padding: 20px 6vw; }
+    }
+    .notfound{
+      color: #43c18f;
+    }
+  </style>
+</head>
+<body>
+  <div class="cover-container">
+    <div class="left">
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:0.98em;opacity:0.5;margin-bottom:10px;">SPIRULINA PROJECT</div>
+      <div class="cover-title">DATA ENTRY</div>
+      <div class="cover-sub">EL PROJECT<br>(BY:ANWESHA
+        ESHITA
+        PRAGATI
+        SWAPNIL)</div>
+      <div class="notfound">GREEN SPARK </div>
+      <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGsEm3wDj0&#x2F;PWPwyUYiyv_XNWFSNakbrA&#x2F;view?utm_content=DAGsEm3wDj0&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link"
+        class="go-home"> HOME</a>
+    </div>
+    <div class="right">
+      <div class="form-title">Bioelectricity Data Entry</div>
+      <form id="bioForm" action="ELPHP.php" method="POST" autocomplete="off">
+        <div class="form-group">
+          <label for="voltage">Output Voltage (V) <span style="color:#1c92d2;">*</span></label>
+          <input type="number" step="0.01" id="voltage" name="voltage" placeholder="e.g., 1.25" required autofocus>
+        </div>
+        <div class="form-group">
+          <label for="sensor">Sensor Used <span style="color:#1c92d2;">*</span></label>
+          <select id="sensor" name="sensor" required>
+            <option value="" disabled selected>Select sensor</option>
+            <option value="DHT22">DHT22 (Temp & Humidity)</option>
+            <option value="LDR">LDR (Light Dependent Resistor)</option>
+            <option value="Photodiode">Photodiode</option>
+            <option value="Multimeter">Multimeter</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="humidity">Humidity (%) <span class="optional">(optional)</span></label>
+          <input type="number" id="humidity" name="humidity" min="0" max="100" placeholder="e.g., 65">
+        </div>
+        <div class="form-group">
+          <label for="lighting">Lighting Condition <span style="color:#1c92d2;">*</span></label>
+          <select id="lighting" name="lighting" required>
+            <option value="" disabled selected>Select lighting</option>
+            <option value="Natural Sunlight">Natural Sunlight</option>
+            <option value="LED Lamp">LED Lamp</option>
+            <option value="Fluorescent">Fluorescent</option>
+            <option value="Dim">Dim</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="intensity">Sunlight Intensity (lux) <span class="optional">(optional)</span></label>
+          <input type="number" id="intensity" name="intensity" placeholder="e.g., 12000">
+        </div>
+        <button class="submit-btn" type="submit">Submit Data</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
