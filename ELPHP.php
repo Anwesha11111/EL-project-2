@@ -47,7 +47,7 @@ if ($result) {
             <li><strong>Sunlight Intensity:</strong> <span style='color:#fff;background:#222;padding:2px 8px;border-radius:6px;'>" . ($intensity !== null ? "{$intensity} lux" : "<em>Not provided</em>") . "</span></li>
         </ul>
         <div style='margin-top:18px;font-size:1.1em;color:#181818;'>Thank you! Your data has been recorded.</div>
-        <a href='index.html' style='display:inline-block;margin-top:20px;padding:10px 20px;background:#181818;color:#1c92d2;border-radius:8px;text-decoration:none;font-family:Space Grotesk,sans-serif;font-weight:700;'>Go Back Home</a>
+        <a href='EL1.html' style='display:inline-block;margin-top:20px;padding:10px 20px;background:#181818;color:#1c92d2;border-radius:8px;text-decoration:none;font-family:Space Grotesk,sans-serif;font-weight:700;'>Go Back Home</a>
     </div>";
 } else {
     echo "<div style='color:#fff;background:#c00;padding:1em;border-radius:1em;'>Error: " . $db->lastErrorMsg() . "</div>";
